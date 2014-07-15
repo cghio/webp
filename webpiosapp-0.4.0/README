@@ -1,0 +1,73 @@
+Example iOS app to display WebP images on iPhone/iPad
+=====================================================
+
+
+Getting Started
+===============
+
+To run this app you need a machine with MAC OS. You also need to have Xcode
+installed. Xcode is the IDE + tools for iOS development. Latest Xcode can be
+downloaded from Apple's iOS Dev Center
+(http://developer.apple.com/devcenter/ios/index.action).
+
+We have developed and tested this app using Xcode version 4.
+
+
+How to Run
+==========
+
+1. Build WebP.framework
+
+First you need to build WebP.framework from libwebp source tar ball.
+An iOS app needs to include WebP.framework to encode/decode WebP images.
+
+To build WebP.framework, first download and untar the latest libwebp source tar
+ball (libwebp-<version>.tar.gz) from http://code.google.com/p/webp/downloads/list.
+Then run the iosbuild.sh script from the base directory of libwebp
+(i.e. libwebp-<version>/). iosbuild.sh script is provided with this tar ball.
+This will create WebP.framework under the current directory.
+
+2. Copy WebP.framework in the same directory where this app is
+
+ViewWebP app looks for the WebP.framework in the "../" directory. This can be changed
+by updating the path of WebP.framework in Xcode. But the easiest thing to do is to
+copy WebP.framework in the same directory where the ViewWebP directory is. That is, in
+the same directory where this README file is.
+
+3. Start Xcode
+
+4. Open ViewWebP/ViewWebP.xcodeproj file in Xcode.
+
+This will open the ViewWebP app.
+
+5. Select preferred device
+
+Select the device on which you want to run the app. At the top left of Xcode
+IDE you can find a drop down list of available devices. If you don't have any
+iOS device connected to your MAC machine then you can choose iPhone or iPad
+Simulator.
+
+6. Run the App
+
+You can run the app by clicking the "Run" button or by selecting "Run" from the
+"Product" menu.
+
+
+App UI
+======
+
+If you are able to run the app successfully then you should see a table showing
+list of thumbnail images and corresponding filenames.
+
+All these thumbnail images are WebP format images.
+
+Tap on any row of the table and now you can see the full size WebP image.
+
+
+
+Please refer to the objective C code (especially WebPImage.m) to see how a
+WebP image is decoded to a UIImage object. It's simple!!!!
+
+Feel free to use it in your iOS app and get better compression by using
+WebP image format.
+

@@ -17,3 +17,6 @@ download:
 	rm -f libwebp-0.4.0-windows-x64-no-wic.zip
 	curl -Ls "https://webp.googlecode.com/files/webpiosapp-0.4.0.tar.gz" | tar xfvz -
 	rm -f ._webpiosapp-0.4.0
+
+checksum:
+	shasum */bin/cwebp */bin/cwebp.exe
